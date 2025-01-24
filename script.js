@@ -24,6 +24,21 @@ function updateInputFields() {
 }
 
 function calculate() {
+    // Show modal instead of calculating
+    document.getElementById('adminModal').style.display = 'block';
+}
+
+function checkPassword() {
+    const password = document.getElementById('adminPassword').value;
+    if (password.toLowerCase() === 'kausthubhisgreat') {
+        document.getElementById('adminModal').style.display = 'none';
+        calculateResults();
+    } else {
+        alert('Wrong password!');
+    }
+}
+
+function calculateResults() {
     const scenario = document.getElementById('scenario').value;
     const angle = parseFloat(document.getElementById('angle').value);
     let result = {};

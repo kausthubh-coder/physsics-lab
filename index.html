@@ -10,6 +10,20 @@
     <div class="container">
         <h1>Vector Calculator</h1>
         
+        <!-- Modal -->
+        <div id="adminModal" class="modal">
+            <div class="modal-content">
+                <h2>Why trying to cheat? 🤔</h2>
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHd5OG82OG1mNmgzMWsyMDYzdGx0eTdub2xhZXRwcjZpZ3lncDhhaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ljx6eVdnGEEkzdEivU/giphy.gif" 
+                     alt="Thinking gif" 
+                     class="modal-gif">
+                <div class="password-section">
+                    <input type="password" id="adminPassword" placeholder="Enter admin password">
+                    <button onclick="checkPassword()">Submit</button>
+                </div>
+            </div>
+        </div>
+
         <div class="calculator">
             <div class="input-section">
                 <select id="scenario" onchange="updateInputFields()">
