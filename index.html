@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vector Calculator</h1>
+        
+        <div class="calculator">
+            <div class="input-section">
+                <select id="scenario" onchange="updateInputFields()">
+                    <option value="magnitude_angle">Magnitude and Angle</option>
+                    <option value="ax_angle">Ax and Angle</option>
+                    <option value="ay_angle">Ay and Angle</option>
+                </select>
+
+                <div id="magnitude-input" class="input-field">
+                    <label for="magnitude">Magnitude:</label>
+                    <input type="number" id="magnitude" step="any">
+                </div>
+
+                <div id="ax-input" class="input-field hidden">
+                    <label for="ax">Ax:</label>
+                    <input type="number" id="ax" step="any">
+                </div>
+
+                <div id="ay-input" class="input-field hidden">
+                    <label for="ay">Ay:</label>
+                    <input type="number" id="ay" step="any">
+                </div>
+
+                <div class="input-field">
+                    <label for="angle">Angle (degrees):</label>
+                    <input type="number" id="angle" step="any">
+                </div>
+
+                <button onclick="calculate()">Calculate</button>
+            </div>
+
+            <div class="result-section">
+                <h2>Results:</h2>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
